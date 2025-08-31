@@ -1,9 +1,11 @@
-const http = require("http");
-const fs = require("fs");
+const readline = require("readline");
 
-const server = http.createServer((req, res) => {
-  const stream = fs.createReadStream("sample.txt");
-  stream.pipe(res);
+const lineDetail = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
 });
 
-server.listen(8080);
+lineDetail.question("Enter your name: ", (ans) => {
+  console.log(`Hi, ${ans}!`);
+  lineDetail.close();
+});
