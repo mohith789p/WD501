@@ -1,7 +1,10 @@
-console.log("Hello 1");
+const firstname = () => console.log("Potnuru");
+const secondname = () => console.log("Mohith");
 
-// Print message after 100 millisecond
-setTimeout(() => {
-  console.log("Hello 2");
-}, 100);
-console.log("Hello 3");
+const printfullname = () => {
+  console.log("My name is ");
+  firstname();
+  secondname();
+};
+
+printfullname();
