@@ -3,7 +3,7 @@ const secondname = () => console.log("Mohith");
 
 const printfullname = () => {
   console.log("My name is ");
-  firstname();
+  setTimeout(firstname, 0);
   secondname();
 };
 
